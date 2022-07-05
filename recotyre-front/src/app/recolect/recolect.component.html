@@ -1,0 +1,168 @@
+<div class="row">
+  <div class="col-1">
+    <app-sidebar></app-sidebar>
+  </div>
+  <div class="col-11">
+    <nav>
+      <div class="dropdown justify-content-start">
+        <button
+          class="btn dropdown-toggle"
+          type="button"
+          id="dropdownMenuButton1"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Zona / Localidad
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item ms-2" href="#">Turbo</a></li>
+          <li><a class="dropdown-item ms-2" href="#">Sencillo</a></li>
+          <li><a class="dropdown-item ms-2" href="#">Doble troque</a></li>
+        </ul>
+        <button
+          class="btn dropdown-toggle ms-5"
+          type="button"
+          id="dropdownMenuButton1"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Punto de recolección
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item ms-2" href="#">Casa Toro Américas</a></li>
+          <li><a class="dropdown-item ms-2" href="#">Taller AutoCar</a></li>
+          <li>
+            <a class="dropdown-item ms-2" href="#">Taller Jr Reparaciones</a>
+          </li>
+        </ul>
+        <div class="w-100 d-flex justify-content-end">
+          <input
+            type="text"
+            name=""
+            class="w-50 rounded"
+            placeholder="Buscar"
+          />
+          <button class="btn btn-outline-success ms-1">Buscar</button>
+        </div>
+      </div>
+    </nav>
+    <div class="info">
+      <h4 class="origin">DATOS DEL PUNTO</h4>
+      <div class="row pb-3">
+        <div class="col-8 py-3">
+          <label class="border rounded w-75 ps-2 mb-4">Nombre del punto</label>
+          <label class="border rounded w-75 ps-2 mb-4">Dirección</label>
+          <label class="border rounded w-75 ps-2 mb-4"
+            >Persona responsable</label
+          >
+        </div>
+        <div class="col-4">
+          <div class="img p-2 h-75 mb-2">
+            <div class="grey w-100 h-100">
+              <img src="" alt="" />
+            </div>
+          </div>
+          <div class="text-center">
+            <button type="button" class="btn btn-primary search">
+              Confirmar Punto
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="info">
+      <h4 class="origin">DATOS DE LAS LLANTAS</h4>
+      <div class="row pb-3">
+        <div class="col-5 py-3">
+          <div class="dropdown justify-content-start">
+            <button
+              class="btn dropdown-toggle border w-100 d-flex justify-content-start"
+              type="button"
+              id="dropdownMenuButton1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Tipo de llanta
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item ms-2" href="#">Camión</a></li>
+              <li>
+                <a class="dropdown-item ms-2" href="#">Fuera de carretera</a>
+              </li>
+              <li><a class="dropdown-item ms-2" href="#">Bicicleta</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-3 py-3">
+          <div class="dropdown">
+            <button
+              class="btn dropdown-toggle border w-100 d-flex justify-content-start"
+              type="button"
+              id="dropdownMenuButton1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Rin
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item ms-2" href="#">22.5</a></li>
+              <li><a class="dropdown-item ms-2" href="#">15</a></li>
+              <li><a class="dropdown-item ms-2" href="#">20.5</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-4 py-3">
+          <input
+            type="number"
+            name=""
+            placeholder="Cantidad"
+            class="w-70 me-1 h-100"
+          />
+          <button type="button" class="btn btn-secondary w-25">
+            <fa-icon [icon]="faCheck"></fa-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div>
+      <table class="table table-striped table-hover border">
+        <thead>
+          <tr class="grey2">
+            <th scope="col" class="border">Tipo de llanta</th>
+            <th scope="col" class="border">Rin</th>
+            <th scope="col" class="border" colspan="2">Cantidad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Cell 1</th>
+            <td class="border">Cell 2</td>
+            <td class="border">Cell 3</td>
+            <td class="border"><input type="checkbox" name=""></td>
+          </tr>
+          <tr>
+            <th scope="row">Cell 4</th>
+            <td class="border">Cell 5</td>
+            <td class="border">Cell 6</td>
+            <td class="border"><input type="checkbox" name="" checked></td>
+          </tr>
+          <tr>
+            <th scope="row">Cell 7</th>
+            <td class="border">Cell 8</td>
+            <td class="border">Cell 9</td>
+            <td class="border"><input type="radio" name=""></td>
+          </tr>
+          <tr>
+            <th scope="row">Cell 10</th>
+            <td class="border">Jacob</td>
+            <td class="border">Thornton</td>
+            <td class="border"><input type="radio" name="" checked></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="text-center">
+      <button class="btn btn-primary">Registrar Llantas</button>
+    </div>
+  </div>
+</div>

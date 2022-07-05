@@ -1,0 +1,50 @@
+nav {
+  margin-top: 5px;
+  padding: 5px 20px;
+  background-color: #eeeeee;
+}
+.dropdown {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+.origin {
+  margin-top: 120px;
+}
+.assigned {
+  margin-top: 20px;
+}
+.direction,
+.search {
+  width: 90%;
+}
+.search {
+  padding-top: 0px;
+  padding-bottom: 5px;
+}
+.points,
+.routes {
+  height: 400px;
+  border: 1px solid #eeeeee;
+}
+.routes {
+  height: 310px;
+}
+.mapouter {
+  position: relative;
+  text-align: right;
+  height: 99%;
+  width: 100%;
+}
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 99%;
+  width: 99%;
+}
+.side {
+  background-color: #eeeeee;  
+}
+.border-bottom {
+    color: grey;
+}

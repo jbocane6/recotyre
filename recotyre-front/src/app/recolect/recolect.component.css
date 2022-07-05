@@ -1,0 +1,22 @@
+nav {
+  margin-top: 5px;
+  padding: 5px 20px;
+  background-color: #eeeeee;
+}
+.dropdown {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+.info {
+  margin-top: 150px;
+}
+.img {
+  border: 1px solid #eeeeee;
+}
+.grey {
+  background-color: #eeeeee;
+}
+.grey2 {
+  background-color: #cccccc;
+}

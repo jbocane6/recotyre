@@ -1,0 +1,39 @@
+/* Basic styling */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: sans-serif;
+}
+nav {
+  margin-top: 5px;
+  padding: 5px 20px;
+  border: 1px solid;
+  background-color: white;
+}
+.menu-right {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+.menu li {
+  font-size: 16px;
+  padding: 15px 5px;
+  white-space: nowrap;
+}
+.menu {
+  list-style-type: none;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.col-9, .col-3 {
+  display: flex;
+  justify-content: space-around;
+}
