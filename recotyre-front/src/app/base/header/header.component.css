@@ -39,7 +39,7 @@ a:hover {
   justify-content: space-around;
 }
 .activelink {
-  display: inline-block;
-  cursor: pointer;
-  color: #ffffff;
+  cursor: no-drop;
+  color: gray;
+  text-decoration: line-through;
 }

@@ -14,8 +14,11 @@ a {
 a:hover {
   text-decoration: underline;
 }
+.link {
+    color: black;  
+}
 .activelink {
-  display: inline-block;
-  cursor: pointer;
-  color: #ffffff;
+  cursor: no-drop;
+  color: gray;
+  text-decoration: line-through;
 }

@@ -72,7 +72,7 @@ h4 {
   margin-bottom: 1px;
 }
 .activelink {
-  display: inline-block;
-  cursor: pointer;
-  color: #ffffff;
+  cursor: no-drop;
+  color: gray;
+  text-decoration: line-through;
 }

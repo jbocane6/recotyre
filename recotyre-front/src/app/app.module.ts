@@ -11,6 +11,7 @@ import { MainComponent } from './main/main.component';
 import { RoutesComponent } from './routes/routes.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { RecolectComponent } from './recolect/recolect.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { RecolectComponent } from './recolect/recolect.component';
     MainComponent,
     RoutesComponent,
     SidebarComponent,
-    RecolectComponent
+    RecolectComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +31,9 @@ import { RecolectComponent } from './recolect/recolect.component';
     RouterModule.forRoot([
       {path: 'main', component: MainComponent},
       {path: 'routes', component: RoutesComponent},
-      {path: 'recolect', component: RecolectComponent}
+      {path: 'recolect', component: RecolectComponent},
+      {path: '', redirectTo: '/main', pathMatch: 'full'},
+      {path: '**', component: PageNotFoundComponent}
     ]),
   ],
   providers: [],
