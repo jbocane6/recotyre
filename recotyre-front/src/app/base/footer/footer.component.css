@@ -1,16 +1,21 @@
 .container {
-    margin-top: 25px;
-    padding: 0%;
+  margin-top: 25px;
+  padding: 0%;
 }
 footer {
-    background-color: #e3f2fd;
+  background-color: #e3f2fd;
 }
 .copyright {
-    background-color: white;
+  background-color: white;
 }
 a {
   text-decoration: none;
 }
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
+}
+.activelink {
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
 }

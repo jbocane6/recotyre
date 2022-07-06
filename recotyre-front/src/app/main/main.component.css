@@ -35,7 +35,8 @@ a:hover {
   border-left: 1px solid;
   border-right: 1px solid;
 }
-.examples, .examples-2 {
+.examples,
+.examples-2 {
   border: 1px solid;
   border-color: #eeeeee;
 }
@@ -54,16 +55,24 @@ h4 {
   margin: 5px 0px 0px 0px;
   height: 400px;
 }
-.first, .second, .third {
+.first,
+.second,
+.third {
   padding: 5px;
   border: 1px solid;
   border-color: #eeeeee;
 }
-.second, .third {
+.second,
+.third {
   padding: 5px;
   margin-left: -5px;
   margin-right: -15px;
 }
 .second {
-  margin-bottom: 1px;   
+  margin-bottom: 1px;
+}
+.activelink {
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
 }
