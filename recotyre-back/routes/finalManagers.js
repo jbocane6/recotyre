@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const dbClient = require('../utils/db');
 const FinalManager = require('../models/finalManager');
 
 router.get('/', (req, res) => {

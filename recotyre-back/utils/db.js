@@ -8,7 +8,7 @@ class DBClient {
         const pwd = process.env.DB_PWD || 'root';
         const database = process.env.DB_DATABASE || 'recotyre';
 
-        mongoose.connect("mongodb+srv://" + user + ":" + pwd + "@cluster0.ss3bi.mongodb.net/?retryWrites=true&w=majority", (event) => {
+        mongoose.connect("mongodb+srv://" + user + ":" + pwd + "@cluster0.ss3bi.mongodb.net/" + database + "?retryWrites=true&w=majority", (event) => {
             console.log("Connected to DB");
         }).catch(e => console.log(e));
     }

@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const dbClient = require('../utils/db');
 const CollectionPoint = require('../models/collectionPoint');
 
 router.get('/', (req, res) => {
