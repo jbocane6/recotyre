@@ -17,6 +17,14 @@ export class CarrierService {
   }
 
   deleteCarrier(nit:any) {
-    return this.http.delete(this.url + 'nit');
+    return this.http.delete(this.url + nit);
+  }
+
+  singleCarrier(carrier: any) {
+    return this.http.get(this.url + 'id');
+  }
+
+  updateCarrier(id: any, carrier: any) {
+    return this.http.patch(this.url + id, carrier);
   }
 }

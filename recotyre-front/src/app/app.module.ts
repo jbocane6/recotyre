@@ -29,6 +29,12 @@ import { FinalManagerListComponent } from './apis/get/final-manager-list/final-m
 import { CollectorListComponent } from './apis/get/collector-list/collector-list.component';
 import { CollectionPointListComponent } from './apis/get/collection-point-list/collection-point-list.component';
 import { CarrierListComponent } from './apis/get/carrier-list/carrier-list.component';
+import { EditVehicleComponent } from './apis/patch/edit-vehicle/edit-vehicle.component';
+import { EditManagerPointComponent } from './apis/patch/edit-manager-point/edit-manager-point.component';
+import { EditFinalManagerComponent } from './apis/patch/edit-final-manager/edit-final-manager.component';
+import { EditCollectorComponent } from './apis/patch/edit-collector/edit-collector.component';
+import { EditCollectionPointComponent } from './apis/patch/edit-collection-point/edit-collection-point.component';
+import { EditCarrierComponent } from './apis/patch/edit-carrier/edit-carrier.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +60,13 @@ import { CarrierListComponent } from './apis/get/carrier-list/carrier-list.compo
     FinalManagerListComponent,
     CollectorListComponent,
     CollectionPointListComponent,
-    CarrierListComponent
+    CarrierListComponent,
+    EditVehicleComponent,
+    EditManagerPointComponent,
+    EditFinalManagerComponent,
+    EditCollectorComponent,
+    EditCollectionPointComponent,
+    EditCarrierComponent
   ],
   imports: [
     BrowserModule,

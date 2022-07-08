@@ -18,7 +18,13 @@ import { FinalManagerListComponent } from './apis/get/final-manager-list/final-m
 import { ManagerPointListComponent } from './apis/get/manager-point-list/manager-point-list.component';
 import { TireListComponent } from './apis/get/tire-list/tire-list.component';
 import { VehicleListComponent } from './apis/get/vehicle-list/vehicle-list.component';
+import { EditCarrierComponent } from './apis/patch/edit-carrier/edit-carrier.component';
+import { EditCollectionPointComponent } from './apis/patch/edit-collection-point/edit-collection-point.component';
+import { EditCollectorComponent } from './apis/patch/edit-collector/edit-collector.component';
+import { EditFinalManagerComponent } from './apis/patch/edit-final-manager/edit-final-manager.component';
+import { EditManagerPointComponent } from './apis/patch/edit-manager-point/edit-manager-point.component';
 import { EditTireComponent } from './apis/patch/edit-tire/edit-tire.component';
+import { EditVehicleComponent } from './apis/patch/edit-vehicle/edit-vehicle.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/main', pathMatch: 'full' },
@@ -39,7 +45,13 @@ const routes: Routes = [
   { path: 'managerPointList', component: ManagerPointListComponent },
   { path: 'tireList', component: TireListComponent },
   { path: 'vehicleList', component: VehicleListComponent },
+  { path: 'editCarrier/:nit', component: EditCarrierComponent },
+  { path: 'editCollectionPoint/:shortId', component: EditCollectionPointComponent },
+  { path: 'editCollector/:nit', component: EditCollectorComponent },
+  { path: 'editFinalManager/:nit', component: EditFinalManagerComponent },
+  { path: 'editManagerPoint/:shortId', component: EditManagerPointComponent },
   { path: 'editTire/:id', component: EditTireComponent },
+  { path: 'editVehicle/:id', component: EditVehicleComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
 

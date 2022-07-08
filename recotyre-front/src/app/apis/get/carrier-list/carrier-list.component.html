@@ -24,10 +24,10 @@
               <tr *ngFor="let carrier of carriers">
                 <td>{{ carrier.companyName }}</td>
                 <td>{{ carrier.nit }}</td>
-                <td>{{ carrier.brand }}</td>
+                <td>{{ carrier.contactPerson }}</td>
                 <td>{{ carrier.phone }}</td>
                 <td>
-                  <a href="edit/{{ carrier._id }}">EDIT</a> |
+                  <a href="editCarrier/{{ carrier.nit }}" class="btn btn-success btn-sm">EDIT</a> |
                   <button
                     (click)="delCarrier(carrier.nit)"
                     class="btn btn-danger btn-sm"

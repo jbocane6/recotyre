@@ -22,8 +22,8 @@ export class CarrierListComponent implements OnInit {
   }
 
   delCarrier(datas: any) {
-    this.carrierService.deleteCarrier(datas.nit).subscribe((data: any) => {
-      this.carriers = this.carriers.filter((u: any) => u !== datas);
+    this.carrierService.deleteCarrier(datas).subscribe((data) => {
+      this.carriers = this.carriers.filter((u: any) => u.nit !== datas);
     });
   }
 }

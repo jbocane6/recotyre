@@ -17,6 +17,14 @@ export class CollectionPointService {
   }
 
   deleteCollectionPoint(shortId:any) {
-    return this.http.delete(this.url + 'shortId');
+    return this.http.delete(this.url + shortId);
+  }
+
+  singleCollectionPoint(collectionPoint: any) {
+    return this.http.get(this.url + 'id');
+  }
+
+  updateCollectionPoint(id: any, collectionPoint: any) {
+    return this.http.patch(this.url + id, collectionPoint);
   }
 }

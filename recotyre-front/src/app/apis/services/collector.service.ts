@@ -17,6 +17,14 @@ export class CollectorService {
   }
 
   deleteCollector(nit:any) {
-    return this.http.delete(this.url + 'nit');
+    return this.http.delete(this.url + nit);
+  }
+
+  singleCollector(collector: any) {
+    return this.http.get(this.url + 'id');
+  }
+
+  updateCollector(id: any, collector: any) {
+    return this.http.patch(this.url + id, collector);
   }
 }

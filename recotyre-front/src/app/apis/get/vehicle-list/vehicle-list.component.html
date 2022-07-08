@@ -25,7 +25,7 @@
                   <td>{{ vehicle.vehiclePlate }}</td>
                   <td>{{ vehicle.capacity }}</td>
                   <td>
-                    <a href="edit/{{ vehicle._id }}">EDIT</a> |
+                    <a href="editVehicle/{{ vehicle._id }}" class="btn btn-success btn-sm">EDIT</a> |
                     <button (click)="delVehicle(vehicle._id)" class="btn btn-danger btn-sm">DELETE</button>
                   </td>
                 </tr>

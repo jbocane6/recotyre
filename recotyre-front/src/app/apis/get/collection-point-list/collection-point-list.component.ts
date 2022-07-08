@@ -22,8 +22,8 @@ export class CollectionPointListComponent implements OnInit {
   }
 
   delCollectionPoint(datas: any) {
-    this.collectionPointService.deleteCollectionPoint(datas.shortId).subscribe((data: any) => {
-      this.collectionPoints = this.collectionPoints.filter((u: any) => u !== datas);
+    this.collectionPointService.deleteCollectionPoint(datas).subscribe((data) => {
+      this.collectionPoints = this.collectionPoints.filter((u: any) => u.shortId !== datas);
     });
   }
 }

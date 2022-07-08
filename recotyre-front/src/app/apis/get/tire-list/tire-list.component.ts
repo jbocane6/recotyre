@@ -22,8 +22,8 @@ export class TireListComponent implements OnInit {
   }
 
   delTire(datas: any) {
-    this.tireService.deleteTire(datas._id).subscribe((data: any) => {
-      this.tires = this.tires.filter((u: any) => u !== datas);
+    this.tireService.deleteTire(datas).subscribe((data) => {
+      this.tires = this.tires.filter((u: any) => u._id !== datas);
     });
   }
 }

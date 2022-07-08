@@ -27,7 +27,7 @@
                 <td>{{ tire.brand }}</td>
                 <td>{{ tire.weight }}</td>
                 <td>
-                  <a href="edit/{{ tire._id }}">EDIT</a> |
+                  <a href="editTire/{{ tire._id }}" class="btn btn-success btn-sm">EDIT</a> |
                   <button (click)="delTire(tire._id)" class="btn btn-danger btn-sm">
                     DELETE
                   </button>

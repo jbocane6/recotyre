@@ -22,8 +22,8 @@ export class FinalManagerListComponent implements OnInit {
   }
 
   delFinalManager(datas: any) {
-    this.finalManagerService.deleteFinalManager(datas.nit).subscribe((data: any) => {
-      this.finalManagers = this.finalManagers.filter((u: any) => u !== datas);
+    this.finalManagerService.deleteFinalManager(datas).subscribe((data) => {
+      this.finalManagers = this.finalManagers.filter((u: any) => u.nit !== datas);
     });
   }
 }

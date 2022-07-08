@@ -19,4 +19,12 @@ export class FinalManagerService {
   deleteFinalManager(nit:any) {
     return this.http.delete(this.url + 'nit');
   }
+
+  singleFinalManager(finalManager: any) {
+    return this.http.get(this.url + 'id');
+  }
+
+  updateFinalManager(id: any, finalManager: any) {
+    return this.http.patch(this.url + id, finalManager);
+  }
 }

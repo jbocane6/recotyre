@@ -5,7 +5,7 @@ import { VehicleService } from '../../services/vehicle.service';
 @Component({
   selector: 'app-vehicle-list',
   templateUrl: './vehicle-list.component.html',
-  styleUrls: ['./vehicle-list.component.css']
+  styleUrls: ['./vehicle-list.component.css'],
 })
 export class VehicleListComponent implements OnInit {
   vehicles: any;
@@ -22,8 +22,8 @@ export class VehicleListComponent implements OnInit {
   }
 
   delVehicle(datas: any) {
-    this.vehicleService.deleteVehicle(datas._id).subscribe((data: any) => {
-      this.vehicles = this.vehicles.filter((u: any) => u !== datas);
+    this.vehicleService.deleteVehicle(datas).subscribe((data) => {
+      this.vehicles = this.vehicles.filter((u: any) => u._id !== datas);
     });
   }
 }

@@ -17,6 +17,14 @@ export class TireService {
   }
 
   deleteTire(id:any) {
-    return this.http.delete(this.url + 'id');
+    return this.http.delete(this.url + id);
+  }
+
+  singleTire(tire: any) {
+    return this.http.get(this.url + 'id');
+  }
+
+  updateTire(id: any, tire: any) {
+    return this.http.patch(this.url + id, tire);
   }
 }

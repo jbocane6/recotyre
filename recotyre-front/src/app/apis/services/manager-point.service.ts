@@ -16,7 +16,15 @@ export class ManagerPointService {
     return this.http.get(this.url);
   }
 
-  deleteManagerPoint(shortId:any) {
-    return this.http.delete(this.url + 'shortId');
+  deleteManagerPoint(id:any) {
+    return this.http.delete(this.url + id);
+  }
+
+  singleManagerPoint(managerPoint: any) {
+    return this.http.get(this.url + 'id');
+  }
+
+  updateManagerPoint(id: any, managerPoint: any) {
+    return this.http.patch(this.url + id, managerPoint);
   }
 }
