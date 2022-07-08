@@ -11,8 +11,8 @@ router.get('/', (req, res) => {
     });
 });
 
-router.get('/:shortId', (req, res) => {
-    ManagerPoint.findOne({ shortId: req.params.shortId }).then(data => {
+router.get('/:id', (req, res) => {
+    ManagerPoint.findOne({ id: req.params._id }).then(data => {
         res.json(data);
     }).catch(e => {
         res.json({ message: e });
@@ -40,8 +40,8 @@ router.post('/create', (req, res) => {
     });
 });
 
-router.patch('/:shortId', (req, res) => {
-    ManagerPoint.updateOne({ shortId: req.params.shortId },
+router.patch('/:id', (req, res) => {
+    ManagerPoint.updateOne({ _id: req.params.id },
         {
             $set: {
                 shortId: req.body.shortId,
@@ -62,8 +62,8 @@ router.patch('/:shortId', (req, res) => {
         });
 });
 
-router.delete('/:shortId', (req, res) => {
-    ManagerPoint.deleteOne({ shortId: req.params.shortId }).then(data => {
+router.delete('/:id', (req, res) => {
+    ManagerPoint.deleteOne({ _id: req.params.id }).then(data => {
         res.json(data);
     }).catch(e => {
         res.json({ message: e });

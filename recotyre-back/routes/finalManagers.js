@@ -11,8 +11,8 @@ router.get('/', (req, res) => {
     });
 });
 
-router.get('/:nit', (req, res) => {
-    FinalManager.findOne({ nit: req.params.nit }).then(data => {
+router.get('/:id', (req, res) => {
+    FinalManager.findOne({ id: req.params._id }).then(data => {
         res.json(data);
     }).catch(e => {
         res.json({ message: e });
@@ -40,8 +40,8 @@ router.post('/create', (req, res) => {
     });
 });
 
-router.patch('/:nit', (req, res) => {
-    FinalManager.updateOne({ nit: req.params.nit },
+router.patch('/:id', (req, res) => {
+    FinalManager.updateOne({ _id: req.params.id },
         {
             $set: {
                 companyName: req.body.companyName,
@@ -62,8 +62,8 @@ router.patch('/:nit', (req, res) => {
         });
 });
 
-router.delete('/:nit', (req, res) => {
-    FinalManager.deleteOne({ nit: req.params.nit }).then(data => {
+router.delete('/:id', (req, res) => {
+    FinalManager.deleteOne({ _id: req.params.id }).then(data => {
         res.json(data);
     }).catch(e => {
         res.json({ message: e });
