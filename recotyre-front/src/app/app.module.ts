@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import {IvyCarouselModule} from 'angular-responsive-carousel';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppRoutingModule } from './app-routing.module';
@@ -74,7 +75,8 @@ import { EditCarrierComponent } from './apis/patch/edit-carrier/edit-carrier.com
     FontAwesomeModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    IvyCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

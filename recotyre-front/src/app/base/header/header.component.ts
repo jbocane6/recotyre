@@ -13,4 +13,5 @@ export class HeaderComponent{
   faInstagram = faInstagram;
   faUserCircle = faUserCircle;
   faUser = faUser;
+  
 }

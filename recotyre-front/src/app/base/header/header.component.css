@@ -43,3 +43,6 @@ a:hover {
   color: gray;
   text-decoration: line-through;
 }
+.logo {
+  width: 4%;
+}
