@@ -20,7 +20,7 @@ router.get('/:nit', (req, res) => {
 });
 
 router.post('/create', (req, res) => {
-    const FinalManager = new FinalManager({
+    const finalManager = new FinalManager({
         companyName: req.body.companyName,
         nit: req.body.nit,
         address: req.body.address,
@@ -33,7 +33,7 @@ router.post('/create', (req, res) => {
         managerPointId: req.body.managerPointId
     });
 
-    FinalManager.save().then(data => {
+    finalManager.save().then(data => {
         res.json(data);
     }).catch(e => {
         res.json({ message: e });

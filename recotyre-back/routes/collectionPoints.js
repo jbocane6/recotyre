@@ -20,7 +20,7 @@ router.get('/:shortId', (req, res) => {
 });
 
 router.post('/create', (req, res) => {
-    const CollectionPoint = new CollectionPoint({
+    const collectionPoint = new CollectionPoint({
         shortId: req.body.shortId,
         pointName: req.body.pointName,
         nit: req.body.nit,
@@ -33,7 +33,7 @@ router.post('/create', (req, res) => {
         schedule: req.body.schedule
     });
 
-    CollectionPoint.save().then(data => {
+    collectionPoint.save().then(data => {
         res.json(data);
     }).catch(e => {
         res.json({ message: e });

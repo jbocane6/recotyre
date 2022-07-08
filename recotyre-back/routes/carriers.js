@@ -20,7 +20,7 @@ router.get('/:nit', (req, res) => {
 });
 
 router.post('/create', (req, res) => {
-    const Carrier = new Carrier({
+    const carrier = new Carrier({
         companyName: req.body.companyName,
         nit: req.body.nit,
         address: req.body.address,
@@ -33,7 +33,7 @@ router.post('/create', (req, res) => {
         vehiclePlate: req.body.vehiclePlate
     });
 
-    Carrier.save().then(data => {
+    carrier.save().then(data => {
         res.json(data);
     }).catch(e => {
         res.json({ message: e });

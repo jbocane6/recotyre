@@ -10,7 +10,7 @@ const vehicleSchema = mongoose.Schema({
     widthDimensions: { type: Number, required: true },
     lengthDimensions: { type: Number, required: true },
     lastMaintenanceDate: { type: Date, required: true, default: Date.now },
-    TechnicalMechanicalExpiration: { type: Date, required: true, default: Date.now },
+    technicalMechanicalExpiration: { type: Date, required: true, default: Date.now },
     soatExpiration: { type: Date, required: true, default: Date.now },
     fuelType: { type: String, required: true }
 });

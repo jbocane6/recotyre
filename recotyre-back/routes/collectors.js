@@ -20,7 +20,7 @@ router.get('/:nit', (req, res) => {
 });
 
 router.post('/create', (req, res) => {
-    const Collector = new Collector({
+    const collector = new Collector({
         companyName: req.body.companyName,
         nit: req.body.nit,
         address: req.body.address,
@@ -33,7 +33,7 @@ router.post('/create', (req, res) => {
         vehiclePlate: req.body.vehiclePlate
     });
 
-    Collector.save().then(data => {
+    collector.save().then(data => {
         res.json(data);
     }).catch(e => {
         res.json({ message: e });

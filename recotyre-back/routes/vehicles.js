@@ -20,7 +20,7 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/create', (req, res) => {
-    const Vehicle = new Vehicle({
+    const vehicle = new Vehicle({
         type: req.body.type,
         brand: req.body.brand,
         model: req.body.model,
@@ -30,12 +30,12 @@ router.post('/create', (req, res) => {
         widthDimensions: req.body.widthDimensions,
         lengthDimensions: req.body.lengthDimensions,
         lastMaintenanceDate: req.body.lastMaintenanceDate,
-        TechnicalMechanicalExpiration: req.body.TechnicalMechanicalExpiration,
+        technicalMechanicalExpiration: req.body.technicalMechanicalExpiration,
         soatExpiration: req.body.soatExpiration,
         fuelType: req.body.fuelType
     });
 
-    Vehicle.save().then(data => {
+    vehicle.save().then(data => {
         res.json(data);
     }).catch(e => {
         res.json({ message: e });
@@ -55,7 +55,7 @@ router.patch('/:id', (req, res) => {
                 widthDimensions: req.body.widthDimensions,
                 lengthDimensions: req.body.lengthDimensions,
                 lastMaintenanceDate: req.body.lastMaintenanceDate,
-                TechnicalMechanicalExpiration: req.body.TechnicalMechanicalExpiration,
+                technicalMechanicalExpiration: req.body.technicalMechanicalExpiration,
                 soatExpiration: req.body.soatExpiration,
                 fuelType: req.body.fuelType
             }
