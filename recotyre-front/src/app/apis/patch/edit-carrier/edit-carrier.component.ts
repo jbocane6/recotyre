@@ -26,7 +26,7 @@ export class EditCarrierComponent implements OnInit {
       contactPerson: ['', Validators.required],
       businessPosition: ['', Validators.required],
       cellPhone: ['', Validators.required],
-      carrierPlate: ['', Validators.required],
+      vehiclePlate: ['', Validators.required],
     });
   }
 

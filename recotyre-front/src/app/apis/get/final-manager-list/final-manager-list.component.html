@@ -27,8 +27,8 @@
                 <td>{{ finalManager.contactPerson }}</td>
                 <td>{{ finalManager.phone }}</td>
                 <td>
-                  <a href="editFinalManager/{{ finalManager.nit }}" class="btn btn-success btn-sm">EDIT</a> |
-                  <button (click)="delFinalManager(finalManager.nit)" class="btn btn-danger btn-sm">
+                  <a href="editFinalManager/{{ finalManager._id }}" class="btn btn-success btn-sm">EDIT</a> |
+                  <button (click)="delFinalManager(finalManager._id)" class="btn btn-danger btn-sm">
                     DELETE
                   </button>
                 </td>

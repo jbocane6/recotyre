@@ -9,7 +9,10 @@ import { FinalManagerService } from '../../services/final-manager.service';
 })
 export class FinalManagerListComponent implements OnInit {
   finalManagers: any;
-  constructor(private finalManagerService: FinalManagerService, private routes: Router) {}
+  constructor(
+    private finalManagerService: FinalManagerService,
+    private routes: Router
+  ) {}
 
   ngOnInit(): void {
     this.loadFinalManager();
@@ -23,7 +26,9 @@ export class FinalManagerListComponent implements OnInit {
 
   delFinalManager(datas: any) {
     this.finalManagerService.deleteFinalManager(datas).subscribe((data) => {
-      this.finalManagers = this.finalManagers.filter((u: any) => u.nit !== datas);
+      this.finalManagers = this.finalManagers.filter(
+        (u: any) => u._id !== datas
+      );
     });
   }
 }

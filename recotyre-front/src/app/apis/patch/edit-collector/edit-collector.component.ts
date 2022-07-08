@@ -26,7 +26,7 @@ export class EditCollectorComponent implements OnInit {
       contactPerson: ['', Validators.required],
       businessPosition: ['', Validators.required],
       cellPhone: ['', Validators.required],
-      collectorPlate: ['', Validators.required],
+      vehiclePlate: ['', Validators.required],
     });
   }
 

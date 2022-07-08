@@ -23,7 +23,7 @@ export class CarrierListComponent implements OnInit {
 
   delCarrier(datas: any) {
     this.carrierService.deleteCarrier(datas).subscribe((data) => {
-      this.carriers = this.carriers.filter((u: any) => u.nit !== datas);
+      this.carriers = this.carriers.filter((u: any) => u._id !== datas);
     });
   }
 }

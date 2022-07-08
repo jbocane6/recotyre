@@ -16,8 +16,8 @@ export class CollectionPointService {
     return this.http.get(this.url);
   }
 
-  deleteCollectionPoint(shortId:any) {
-    return this.http.delete(this.url + shortId);
+  deleteCollectionPoint(id:any) {
+    return this.http.delete(this.url + id);
   }
 
   singleCollectionPoint(collectionPoint: any) {

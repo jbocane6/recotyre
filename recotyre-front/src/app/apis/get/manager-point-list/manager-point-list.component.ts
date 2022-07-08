@@ -27,7 +27,7 @@ export class ManagerPointListComponent implements OnInit {
   delManagerPoint(datas: any) {
     this.managerPointService.deleteManagerPoint(datas).subscribe((data) => {
       this.managerPoints = this.managerPoints.filter(
-        (u: any) => u.shortId !== datas
+        (u: any) => u._id !== datas
       );
     });
   }

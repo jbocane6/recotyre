@@ -16,8 +16,8 @@ export class CollectorService {
     return this.http.get(this.url);
   }
 
-  deleteCollector(nit:any) {
-    return this.http.delete(this.url + nit);
+  deleteCollector(id:any) {
+    return this.http.delete(this.url + id);
   }
 
   singleCollector(collector: any) {

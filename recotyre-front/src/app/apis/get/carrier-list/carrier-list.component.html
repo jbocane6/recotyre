@@ -27,9 +27,9 @@
                 <td>{{ carrier.contactPerson }}</td>
                 <td>{{ carrier.phone }}</td>
                 <td>
-                  <a href="editCarrier/{{ carrier.nit }}" class="btn btn-success btn-sm">EDIT</a> |
+                  <a href="editCarrier/{{ carrier._id }}" class="btn btn-success btn-sm">EDIT</a> |
                   <button
-                    (click)="delCarrier(carrier.nit)"
+                    (click)="delCarrier(carrier._id)"
                     class="btn btn-danger btn-sm"
                   >
                     DELETE

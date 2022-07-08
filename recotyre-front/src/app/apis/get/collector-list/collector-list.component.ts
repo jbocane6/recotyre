@@ -26,7 +26,7 @@ export class CollectorListComponent implements OnInit {
 
   delCollector(datas: any) {
     this.collectorService.deleteCollector(datas).subscribe((data) => {
-      this.collectors = this.collectors.filter((u: any) => u.nit !== datas);
+      this.collectors = this.collectors.filter((u: any) => u._id !== datas);
     });
   }
 }

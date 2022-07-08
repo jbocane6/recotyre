@@ -27,8 +27,8 @@
                   <td>{{ collector.contactPerson }}</td>
                   <td>{{ collector.phone }}</td>
                   <td>
-                    <a href="editCollector/{{ collector.nit }}" class="btn btn-success btn-sm">EDIT</a> |
-                    <button (click)="delCollector(collector.nit)" class="btn btn-danger btn-sm">
+                    <a href="editCollector/{{ collector._id }}" class="btn btn-success btn-sm">EDIT</a> |
+                    <button (click)="delCollector(collector._id)" class="btn btn-danger btn-sm">
                       DELETE
                     </button>
                   </td>

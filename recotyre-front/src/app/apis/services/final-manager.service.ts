@@ -16,8 +16,8 @@ export class FinalManagerService {
     return this.http.get(this.url);
   }
 
-  deleteFinalManager(nit:any) {
-    return this.http.delete(this.url + 'nit');
+  deleteFinalManager(id:any) {
+    return this.http.delete(this.url + id);
   }
 
   singleFinalManager(finalManager: any) {

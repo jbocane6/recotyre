@@ -27,8 +27,8 @@
                   <td>{{ collectionPoint.contactPerson }}</td>
                   <td>{{ collectionPoint.phone }}</td>
                   <td>
-                    <a href="editCollectionPoint/{{ collectionPoint.shortId }}" class="btn btn-success btn-sm">EDIT</a> |
-                    <button (click)="delCollectionPoint(collectionPoint.shortId)" class="btn btn-danger btn-sm">
+                    <a href="editCollectionPoint/{{ collectionPoint._id }}" class="btn btn-success btn-sm">EDIT</a> |
+                    <button (click)="delCollectionPoint(collectionPoint._id)" class="btn btn-danger btn-sm">
                       DELETE
                     </button>
                   </td>
