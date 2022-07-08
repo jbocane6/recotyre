@@ -1,10 +1,50 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { MainComponent } from './pages/main/main.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { RecolectComponent } from './pages/recolect/recolect.component';
+import { RoutesComponent } from './pages/routes/routes.component';
+import { AddCarrierComponent } from './apis/post/add-carrier/add-carrier.component';
+import { AddCollectionPointComponent } from './apis/post/add-collection-point/add-collection-point.component';
+import { AddCollectorComponent } from './apis/post/add-collector/add-collector.component';
+import { AddFinalManagerComponent } from './apis/post/add-final-manager/add-final-manager.component';
+import { AddManagerPointComponent } from './apis/post/add-manager-point/add-manager-point.component';
+import { AddTireComponent } from './apis/post/add-tire/add-tire.component';
+import { AddVehicleComponent } from './apis/post/add-vehicle/add-vehicle.component';
+import { CarrierListComponent } from './apis/get/carrier-list/carrier-list.component';
+import { CollectionPointListComponent } from './apis/get/collection-point-list/collection-point-list.component';
+import { CollectorListComponent } from './apis/get/collector-list/collector-list.component';
+import { FinalManagerListComponent } from './apis/get/final-manager-list/final-manager-list.component';
+import { ManagerPointListComponent } from './apis/get/manager-point-list/manager-point-list.component';
+import { TireListComponent } from './apis/get/tire-list/tire-list.component';
+import { VehicleListComponent } from './apis/get/vehicle-list/vehicle-list.component';
+import { EditTireComponent } from './apis/patch/edit-tire/edit-tire.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: '', redirectTo: '/main', pathMatch: 'full' },
+  { path: 'main', component: MainComponent },
+  { path: 'routes', component: RoutesComponent },
+  { path: 'recolect', component: RecolectComponent },
+  { path: 'addCarrier', component: AddCarrierComponent },
+  { path: 'addCollectionPoint', component: AddCollectionPointComponent },
+  { path: 'addCollector', component: AddCollectorComponent },
+  { path: 'addFinalManager', component: AddFinalManagerComponent },
+  { path: 'addManagerPoint', component: AddManagerPointComponent },
+  { path: 'addTire', component: AddTireComponent },
+  { path: 'addVehicle', component: AddVehicleComponent },
+  { path: 'carrierList', component: CarrierListComponent },
+  { path: 'collectionPointList', component: CollectionPointListComponent },
+  { path: 'collectorList', component: CollectorListComponent },
+  { path: 'finalManagerList', component: FinalManagerListComponent },
+  { path: 'managerPointList', component: ManagerPointListComponent },
+  { path: 'tireList', component: TireListComponent },
+  { path: 'vehicleList', component: VehicleListComponent },
+  { path: 'editTire/:id', component: EditTireComponent },
+  { path: '**', component: PageNotFoundComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

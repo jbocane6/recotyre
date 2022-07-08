@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col-1">
+      <app-sidebar></app-sidebar>
+    </div>
+    <div class="col-11">
+      <div class="row mt-5 me-1 py-2 rounded text-center">
+        <div class="col-md-12 border formFrame">
+          <div class="text-center mt-3">
+            <h2>Manager Points List</h2>
+            <br />
+          </div>
+          <div class="row">
+            <table class="table table-bordered table-light border-dark mx-2 table-sm" >
+              <thead table table-bordered>
+                <th>Manager Name</th>
+                <th>Nit</th>
+                <th>Contact Person</th>
+                <th>Cellphone</th>
+                <th>EDIT | DELETE</th>
+              </thead>
+              <tbody>
+                <tr *ngFor="let managerPoint of managerPoints">
+                  <td>{{ managerPoint.managerName }}</td>
+                  <td>{{ managerPoint.nit }}</td>
+                  <td>{{ managerPoint.contactPerson }}</td>
+                  <td>{{ managerPoint.cellPhone }}</td>
+                  <td>
+                    <a href="edit/{{ managerPoint.shortId }}">EDIT</a> |
+                    <button (click)="delManagerPoint(managerPoint.shortId)" class="btn btn-danger btn-sm">DELETE</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,201 @@
+<div class="row">
+  <div class="col-1">
+    <app-sidebar></app-sidebar>
+  </div>
+  <div class="col-11">
+    <div class="row mt-5 mx-4 py-2 rounded text-center">
+      <div class="col-md-3"></div>
+      <div class="col-md-6 border formFrame">
+        <div class="text-center mt-3">
+          <h2>Add Registry</h2>
+          <br />
+        </div>
+
+        <div class="row">
+          <form [formGroup]="addVehicle" novalidate class="form">
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-4 text-center mb-1">Type</div>
+              <div class="col-md-4">
+                <input
+                  type="text"
+                  formControlName="type"
+                  class="form-control mb-1"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="col-md-2"></div>
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-4 text-center mb-1">Brand</div>
+              <div class="col-md-4">
+                <input
+                  type="text"
+                  formControlName="brand"
+                  class="form-control mb-1"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="col-md-2"></div>
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-4 text-center mb-1">Model</div>
+              <div class="col-md-4">
+                <input
+                  type="text"
+                  formControlName="model"
+                  class="form-control mb-1"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="col-md-2"></div>
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-4 text-center mb-1">Vehicle Plate</div>
+              <div class="col-md-4">
+                <input
+                  type="text"
+                  formControlName="vehiclePlate"
+                  class="form-control mb-1"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="col-md-2"></div>
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-4 text-center mb-1">Capacity</div>
+              <div class="col-md-4">
+                <input
+                  type="number"
+                  formControlName="capacity"
+                  class="form-control mb-1"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="col-md-2"></div>
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-4 text-center mb-1">Height Dimensions</div>
+              <div class="col-md-4">
+                <input
+                  type="number"
+                  formControlName="heightDimensions"
+                  class="form-control mb-1"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="col-md-2"></div>
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-4 text-center mb-1">Width Dimensions</div>
+              <div class="col-md-4">
+                <input
+                  type="number"
+                  formControlName="widthDimensions"
+                  class="form-control mb-1"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="col-md-2"></div>
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-4 text-center mb-1">Length Dimensions</div>
+              <div class="col-md-4">
+                <input
+                  type="number"
+                  formControlName="lengthDimensions"
+                  class="form-control mb-1"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="col-md-2"></div>
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-4 text-center mb-1">Last Maintenance Date</div>
+              <div class="col-md-4">
+                <input
+                  type="date"
+                  formControlName="lastMaintenanceDate"
+                  class="form-control mb-1"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="col-md-2"></div>
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-4 text-center mb-1">
+                Technical Mechanical Expiration
+              </div>
+              <div class="col-md-4">
+                <input
+                  type="date"
+                  formControlName="technicalMechanicalExpiration"
+                  class="form-control mb-1"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="col-md-2"></div>
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-4 text-center mb-1">SOAT Expiration</div>
+              <div class="col-md-4">
+                <input
+                  type="date"
+                  formControlName="soatExpiration"
+                  class="form-control mb-1"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="col-md-2"></div>
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-4 text-center mb-1">Fuel Type</div>
+              <div class="col-md-4">
+                <input
+                  type="text"
+                  formControlName="fuelType"
+                  class="form-control mb-1"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12 text-center mt-3 mb-3">
+                <button
+                  type="submit"
+                  (click)="onSubmit()"
+                  class="btn btn-success"
+                >
+                  Add Vehicle
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

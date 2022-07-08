@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-1">
+    <app-sidebar></app-sidebar>
+  </div>
+  <div class="col-11">
+    <div class="row mt-5 me-1 py-2 rounded text-center">
+      <div class="col-md-12 border formFrame">
+        <div class="text-center mt-3">
+          <h2>Tires List</h2>
+          <br />
+        </div>
+        <div class="row">
+          <table
+            class="table table-bordered table-warning border-dark mx-2 table-sm"
+          >
+            <thead table table-bordered>
+              <th>Type</th>
+              <th>Rhine</th>
+              <th>Brand</th>
+              <th>weight</th>
+              <th>EDIT | DELETE</th>
+            </thead>
+            <tbody>
+              <tr *ngFor="let tire of tires">
+                <td>{{ tire.type }}</td>
+                <td>{{ tire.rhine }}</td>
+                <td>{{ tire.brand }}</td>
+                <td>{{ tire.weight }}</td>
+                <td>
+                  <a href="edit/{{ tire._id }}">EDIT</a> |
+                  <button (click)="delTire(tire._id)" class="btn btn-danger btn-sm">
+                    DELETE
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
