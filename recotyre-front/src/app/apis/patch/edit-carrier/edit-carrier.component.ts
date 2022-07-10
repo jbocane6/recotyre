@@ -6,17 +6,18 @@ import { CarrierService } from '../../services/carrier.service';
 @Component({
   selector: 'app-edit-carrier',
   templateUrl: './edit-carrier.component.html',
-  styleUrls: ['./edit-carrier.component.css']
+  styleUrls: ['./edit-carrier.component.css'],
 })
 export class EditCarrierComponent implements OnInit {
-  addCarrier: any;
+  editCarrier: any;
   id: any;
   constructor(
     private fb: FormBuilder,
     private routes: Router,
-    private carrierService: CarrierService, private url:ActivatedRoute
+    private carrierService: CarrierService,
+    private url: ActivatedRoute
   ) {
-    this.addCarrier = fb.group({
+    this.editCarrier = fb.group({
       companyName: ['', Validators.required],
       nit: ['', Validators.required],
       address: ['', Validators.required],
@@ -32,15 +33,14 @@ export class EditCarrierComponent implements OnInit {
 
   ngOnInit(): void {
     this.id = this.url.snapshot.params['id'];
-    this.carrierService.singleCarrier(this.id).subscribe(data => {
-      this.addCarrier.patchValue(data);
+    this.carrierService.singleCarrier(this.id).subscribe((data) => {
+      this.editCarrier.patchValue(data);
     });
-
   }
 
   onSubmit() {
     this.carrierService
-      .updateCarrier(this.id, this.addCarrier.value)
+      .updateCarrier(this.id, this.editCarrier.value)
       .subscribe((data: any) => {
         console.log(data);
         this.routes.navigate(['/carrierList']);

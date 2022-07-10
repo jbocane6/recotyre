@@ -21,7 +21,7 @@ export class FinalManagerService {
   }
 
   singleFinalManager(finalManager: any) {
-    return this.http.get(this.url + 'id');
+    return this.http.get(this.url + finalManager);
   }
 
   updateFinalManager(id: any, finalManager: any) {

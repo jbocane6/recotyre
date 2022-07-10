@@ -21,7 +21,7 @@ export class CollectionPointService {
   }
 
   singleCollectionPoint(collectionPoint: any) {
-    return this.http.get(this.url + 'id');
+    return this.http.get(this.url + collectionPoint);
   }
 
   updateCollectionPoint(id: any, collectionPoint: any) {

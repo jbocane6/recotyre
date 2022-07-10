@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { faSearch, faHome, faCalendar, faUserFriends, faGear, faChartLine, faInbox } from '@fortawesome/free-solid-svg-icons';
-import { faFileText, faImage } from '@fortawesome/free-regular-svg-icons';
+import { faWarehouse, faHelmetSafety, faTruckPickup, faUserFriends, faGear, faUserTie, faIndustry, faTruck, faRing } from '@fortawesome/free-solid-svg-icons';
+import {  } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-sidebar',
@@ -9,13 +9,13 @@ import { faFileText, faImage } from '@fortawesome/free-regular-svg-icons';
 })
 export class SidebarComponent {
 
-  faSearch = faSearch;
-  faHome = faHome;
-  faFile = faFileText;
-  faChartLine = faChartLine;
-  faInbox = faInbox;
-  faImage = faImage;
-  faCalendar = faCalendar;
+  faTruck = faTruck;
+  faWarehouse = faWarehouse;
+  faHelmetSafety = faHelmetSafety;
+  faUserTie = faUserTie;
+  faIndustry = faIndustry;
+  faRing = faRing;
+  faTruckPickup = faTruckPickup;
   faUserFriends = faUserFriends;
   faGear = faGear;
 

@@ -26,8 +26,17 @@
                   <td>{{ collector.companyName }}</td>
                   <td>{{ collector.nit }}</td>
                   <td>{{ collector.contactPerson }}</td>
-                  <td>{{ collector.phone }}</td>
+                  <td>{{ collector.cellPhone }}</td>
                   <td>
+                    <button
+                    type="button"
+                    class="btn btn-primary btn-sm"
+                    data-bs-toggle="modal"
+                    (click)="showCollector(collector)"
+                    >
+                    INFO
+                  </button>
+                  |
                     <a href="editCollector/{{ collector._id }}" class="btn btn-success btn-sm">EDIT</a> |
                     <button (click)="delCollector(collector._id)" class="btn btn-danger btn-sm">
                       DELETE

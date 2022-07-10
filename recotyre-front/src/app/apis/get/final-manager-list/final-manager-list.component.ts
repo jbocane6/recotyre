@@ -9,6 +9,7 @@ import { FinalManagerService } from '../../services/final-manager.service';
 })
 export class FinalManagerListComponent implements OnInit {
   finalManagers: any;
+  finalManager: any;
   constructor(
     private finalManagerService: FinalManagerService,
     private routes: Router
@@ -30,5 +31,30 @@ export class FinalManagerListComponent implements OnInit {
         (u: any) => u._id !== datas
       );
     });
+  }
+
+  showFinalManager(finalManager: any) {
+    this.finalManager =
+      'Name :\t\t\t\t' +
+      finalManager.companyName +
+      '\nNIT :\t\t\t\t' +
+      finalManager.nit +
+      '\nAddress :\t\t\t' +
+      finalManager.address +
+      '\nCity :\t\t\t\t' +
+      finalManager.city +
+      '\nEmail :\t\t\t\t' +
+      finalManager.email +
+      '\nPhone :\t\t\t\t' +
+      finalManager.phone +
+      '\nContact :\t\t\t' +
+      finalManager.contactPerson +
+      '\nPosition :\t\t\t' +
+      finalManager.businessPosition +
+      '\nCellPhone :\t\t\t' +
+      finalManager.cellPhone +
+      '\nManager Point :\t' +
+      finalManager.managerPointId;
+    alert(this.finalManager);
   }
 }

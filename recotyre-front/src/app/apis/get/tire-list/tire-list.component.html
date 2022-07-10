@@ -15,19 +15,28 @@
             class="table table-bordered table-warning border-dark mx-2 table-sm"
           >
             <thead table table-bordered>
-              <th>Type</th>
-              <th>Rhine</th>
               <th>Brand</th>
-              <th>weight</th>
+              <th>Rhine</th>
+              <th>Diameter</th>
+              <th>Type</th>
               <th>EDIT | DELETE</th>
             </thead>
             <tbody>
               <tr *ngFor="let tire of tires">
-                <td>{{ tire.type }}</td>
-                <td>{{ tire.rhine }}</td>
                 <td>{{ tire.brand }}</td>
-                <td>{{ tire.weight }}</td>
+                <td>{{ tire.rhine }}</td>
+                <td>{{ tire.heightDimensions }}</td>
+                <td>{{ tire.type }}</td>
                 <td>
+                  <button
+                    type="button"
+                    class="btn btn-primary btn-sm"
+                    data-bs-toggle="modal"
+                    (click)="showTire(tire)"
+                    >
+                    INFO
+                  </button>
+                  |
                   <a href="editTire/{{ tire._id }}" class="btn btn-success btn-sm">EDIT</a> |
                   <button (click)="delTire(tire._id)" class="btn btn-danger btn-sm">
                     DELETE

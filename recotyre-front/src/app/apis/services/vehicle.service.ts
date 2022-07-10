@@ -21,7 +21,7 @@ export class VehicleService {
   }
 
   singleVehicle(vehicle: any) {
-    return this.http.get(this.url + 'id');
+    return this.http.get(this.url + vehicle);
   }
 
   updateVehicle(id: any, vehicle: any) {

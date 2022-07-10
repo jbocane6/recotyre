@@ -9,6 +9,7 @@ import { CollectionPointService } from '../../services/collection-point.service'
 })
 export class CollectionPointListComponent implements OnInit {
   collectionPoints: any;
+  collectionPoint: any;
   constructor(
     private collectionPointService: CollectionPointService,
     private routes: Router
@@ -32,5 +33,30 @@ export class CollectionPointListComponent implements OnInit {
           (u: any) => u._id !== datas
         );
       });
+  }
+
+  showCollectionPoint(collectionPoint: any) {
+    this.collectionPoint =
+      'ID :\t\t\t' +
+      collectionPoint.shortId +
+      '\nName :\t\t' +
+      collectionPoint.pointName +
+      '\nNIT :\t\t' +
+      collectionPoint.nit +
+      '\nAddress :\t' +
+      collectionPoint.address +
+      '\nCity :\t\t' +
+      collectionPoint.city +
+      '\nEmail :\t\t' +
+      collectionPoint.email +
+      '\nPhone :\t\t' +
+      collectionPoint.phone +
+      '\nContact :\t' +
+      collectionPoint.contactPerson +
+      '\nCellPhone :\t' +
+      collectionPoint.cellPhone +
+      '\nSchedule :\t' +
+      collectionPoint.schedule;
+    alert(this.collectionPoint);
   }
 }

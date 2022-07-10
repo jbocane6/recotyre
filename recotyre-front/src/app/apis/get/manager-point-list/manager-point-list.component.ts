@@ -9,6 +9,7 @@ import { ManagerPointService } from '../../services/manager-point.service';
 })
 export class ManagerPointListComponent implements OnInit {
   managerPoints: any;
+  managerPoint: any;
   constructor(
     private managerPointService: ManagerPointService,
     private routes: Router
@@ -30,5 +31,30 @@ export class ManagerPointListComponent implements OnInit {
         (u: any) => u._id !== datas
       );
     });
+  }
+
+  showManagerPoint(managerPoint: any) {
+    this.managerPoint =
+      'ID :\t\t\t' +
+      managerPoint.shortId +
+      '\nName :\t\t' +
+      managerPoint.managerName +
+      '\nNIT :\t\t' +
+      managerPoint.nit +
+      '\nAddress :\t' +
+      managerPoint.address +
+      '\nCity :\t\t' +
+      managerPoint.city +
+      '\nEmail :\t\t' +
+      managerPoint.email +
+      '\nPhone :\t\t' +
+      managerPoint.phone +
+      '\nContact :\t' +
+      managerPoint.contactPerson +
+      '\nCellPhone :\t' +
+      managerPoint.cellPhone +
+      '\nSchedule :\t' +
+      managerPoint.schedule;
+    alert(this.managerPoint);
   }
 }

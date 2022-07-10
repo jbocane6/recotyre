@@ -16,7 +16,7 @@
                 <th>Manager Name</th>
                 <th>Nit</th>
                 <th>Contact Person</th>
-                <th>Cellphone</th>
+                <th>Phone</th>
                 <th>EDIT | DELETE</th>
               </thead>
               <tbody>
@@ -26,6 +26,15 @@
                   <td>{{ managerPoint.contactPerson }}</td>
                   <td>{{ managerPoint.cellPhone }}</td>
                   <td>
+                    <button
+                      type="button"
+                      class="btn btn-primary btn-sm"
+                      data-bs-toggle="modal"
+                      (click)="showManagerPoint(managerPoint)"
+                      >
+                      INFO
+                    </button>
+                    |
                     <a href="editManagerPoint/{{ managerPoint._id }}" class="btn btn-success btn-sm">EDIT</a> |
                     <button (click)="delManagerPoint(managerPoint._id)" class="btn btn-danger btn-sm">DELETE</button>
                   </td>

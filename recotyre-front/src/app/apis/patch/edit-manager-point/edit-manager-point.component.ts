@@ -31,7 +31,7 @@ export class EditManagerPointComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.id = this.url.snapshot.params['shortId'];
+    this.id = this.url.snapshot.params['id'];
     this.managerPointService.singleManagerPoint(this.id).subscribe(data => {
       this.addManagerPoint.patchValue(data);
     });

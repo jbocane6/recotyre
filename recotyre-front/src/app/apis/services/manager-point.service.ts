@@ -21,7 +21,7 @@ export class ManagerPointService {
   }
 
   singleManagerPoint(managerPoint: any) {
-    return this.http.get(this.url + 'id');
+    return this.http.get(this.url + managerPoint);
   }
 
   updateManagerPoint(id: any, managerPoint: any) {

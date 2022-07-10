@@ -21,7 +21,7 @@ export class TireService {
   }
 
   singleTire(tire: any) {
-    return this.http.get(this.url + 'id');
+    return this.http.get(this.url + tire);
   }
 
   updateTire(id: any, tire: any) {

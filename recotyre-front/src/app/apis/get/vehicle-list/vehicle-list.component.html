@@ -26,6 +26,15 @@
                   <td>{{ vehicle.vehiclePlate }}</td>
                   <td>{{ vehicle.capacity }}</td>
                   <td>
+                    <button
+                      type="button"
+                      class="btn btn-primary btn-sm"
+                      data-bs-toggle="modal"
+                      (click)="showVehicle(vehicle)"
+                      >
+                      INFO
+                    </button>
+                    |
                     <a href="editVehicle/{{ vehicle._id }}" class="btn btn-success btn-sm">EDIT</a> |
                     <button (click)="delVehicle(vehicle._id)" class="btn btn-danger btn-sm">DELETE</button>
                   </td>

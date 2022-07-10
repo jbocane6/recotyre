@@ -9,7 +9,7 @@ import { TireService } from '../../services/tire.service';
   styleUrls: ['./edit-tire.component.css'],
 })
 export class EditTireComponent implements OnInit {
-  addTire: any;
+  editTire: any;
   id: any;
   constructor(
     private fb: FormBuilder,
@@ -17,7 +17,7 @@ export class EditTireComponent implements OnInit {
     private tireService: TireService,
     private url: ActivatedRoute
   ) {
-    this.addTire = fb.group({
+    this.editTire = fb.group({
       type: ['', Validators.required],
       rhine: ['', Validators.required],
       brand: ['', Validators.required],
@@ -30,14 +30,15 @@ export class EditTireComponent implements OnInit {
 
   ngOnInit(): void {
     this.id = this.url.snapshot.params['id'];
+    console.log(this.id);
     this.tireService.singleTire(this.id).subscribe((data) => {
-      this.addTire.patchValue(data);
+      this.editTire.patchValue(data);
     });
   }
 
   onSubmit() {
     this.tireService
-      .updateTire(this.id, this.addTire.value)
+      .updateTire(this.id, this.editTire.value)
       .subscribe((data: any) => {
         console.log(data);
         this.routes.navigate(['/tireList']);

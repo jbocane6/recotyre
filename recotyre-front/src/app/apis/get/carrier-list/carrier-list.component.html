@@ -26,9 +26,23 @@
                 <td>{{ carrier.companyName }}</td>
                 <td>{{ carrier.nit }}</td>
                 <td>{{ carrier.contactPerson }}</td>
-                <td>{{ carrier.phone }}</td>
+                <td>{{ carrier.cellPhone }}</td>
                 <td>
-                  <a href="editCarrier/{{ carrier._id }}" class="btn btn-success btn-sm">EDIT</a> |
+                  <button
+                    type="button"
+                    class="btn btn-primary btn-sm"
+                    data-bs-toggle="modal"
+                    (click)="showCarrier(carrier)"
+                    >
+                    INFO
+                  </button>
+                  |
+                  <a
+                    href="editCarrier/{{ carrier._id }}"
+                    class="btn btn-success btn-sm"
+                    >EDIT</a
+                  >
+                  |
                   <button
                     (click)="delCarrier(carrier._id)"
                     class="btn btn-danger btn-sm"

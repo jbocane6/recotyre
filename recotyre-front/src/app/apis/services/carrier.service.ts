@@ -21,7 +21,7 @@ export class CarrierService {
   }
 
   singleCarrier(carrier: any) {
-    return this.http.get(this.url + 'id');
+    return this.http.get(this.url + carrier);
   }
 
   updateCarrier(id: any, carrier: any) {

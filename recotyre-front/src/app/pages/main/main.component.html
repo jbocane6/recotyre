@@ -1,18 +1,18 @@
 <div class="examples">
   <div class="carousel my-2 mx-2">
     <carousel
-          [images]="images"
-          [cellsToShow]="1"
-          [cellsToScroll]="2"
-          [autoplay]="true"
-          [autoplayInterval]="3000"
-          [dots]="true"
-          [margin]="20"
-          [borderRadius]="5"
-          [height]="500"
-          [loop] = true
-        >
-        </carousel>
+      [images]="images"
+      [cellsToShow]="1"
+      [cellsToScroll]="2"
+      [autoplay]="true"
+      [autoplayInterval]="3000"
+      [dots]="true"
+      [margin]="20"
+      [borderRadius]="5"
+      [height]="500"
+      [loop]="true"
+    >
+    </carousel>
   </div>
 </div>
 
@@ -56,40 +56,83 @@
 <div class="row me-3 mb-5">
   <div class="col-md-8 first rounded">
     <div class="examples-2 h-100">
-      <img src="../../../assets/tires-1.jpeg" alt="tires-1" class="tires-1" />
+      <div class="flip-card h-100 w-100">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img
+              src="../../../assets/tires-1.jpeg"
+              alt="Avatar"
+              class="h-100 w-100"
+            />
+          </div>
+          <div class="flip-card-back">
+            <h1>John Doe</h1>
+            <p>Architect & Engineer</p>
+            <p>We love that guy</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="col-md-4">
     <div class="second h-50 rounded">
-      <div class="examples-2 h-100">
-        <img src="../../../assets/tires-2.jpeg" alt="tires-1" class="tires-2" />
+      <!-- <img src="../../../assets/tires-2.jpeg" alt="tires-1" class="tires-2" /> -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img
+              src="../../../assets/tires-2.jpeg"
+              alt="tires-2"
+              class="tires"
+            />
+          </div>
+          <div class="flip-card-back">
+            <h1>John Doe</h1>
+            <p>Architect & Engineer</p>
+            <p>We love that guy</p>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="third h-50 rounded">
-      <div class="examples-2 h-100">
-        <img src="../../../assets/tires-3.jpeg" alt="tires-1" class="tires-2" />
+    <div class="third rounded">
+      <!-- <img src="../../../assets/tires-3.jpeg" alt="tires-1" class="tires-2" /> -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img
+              src="../../../assets/tires-3.jpeg"
+              alt="Avatar"
+              class="tires-2"
+            />
+          </div>
+          <div class="flip-card-back">
+            <h1>John Doe</h1>
+            <p>Architect & Engineer</p>
+            <p>We love that guy</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<br /><br />
-<div class="mt-5">
-  <h4 class="text-center my-3">EMPRESAS ASOCIADAS</h4>
-  <div class="examples">
-    <div class="companies">
-      <carousel
-        [images]="companies"
-        [cellsToShow]="2"
-        [cellsToScroll]="2"
-        [autoplay]="true"
-        [autoplayInterval]="2000"
-        [dots]="true"
-        [margin]="20"
-        [borderRadius]="5"
-        [height]="100"
-        [loop] = true
-      >
-      </carousel>
+  <br /><br />
+  <div class="mt-5 mb-5">
+    <h4 class="text-center my-3">EMPRESAS ASOCIADAS</h4>
+    <div class="examples">
+      <div class="companies">
+        <carousel
+          [images]="companies"
+          [cellsToShow]="2"
+          [cellsToScroll]="2"
+          [autoplay]="true"
+          [autoplayInterval]="2000"
+          [dots]="true"
+          [margin]="20"
+          [borderRadius]="5"
+          [height]="100"
+          [loop]="true"
+        >
+        </carousel>
+      </div>
     </div>
   </div>
 </div>

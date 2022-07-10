@@ -74,40 +74,42 @@
       <h4 class="origin">DATOS DE LAS LLANTAS</h4>
       <div class="row pb-3">
         <div class="col-5 py-3">
-          <div class="dropdown justify-content-start">
+          <div class="dropdown btn-group">
             <button
-              class="btn dropdown-toggle border w-100 d-flex justify-content-start"
+              class="btn w-50 btn-sm border border-end-0 text-start"
+              disabled
+            >
+              Tipo de llanta
+            </button>
+            <button
+              class="btn dropdown-toggle w-50 border border-start-0 btn-sm text-end"
               type="button"
               id="dropdownMenuButton1"
               data-bs-toggle="dropdown"
               aria-expanded="false"
-            >
-              Tipo de llanta
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item ms-2" href="#">Camión</a></li>
-              <li>
-                <a class="dropdown-item ms-2" href="#">Fuera de carretera</a>
+            ></button>
+            <ul class="dropdown-menu w-50">
+              <li *ngFor="let tyre of tyres">
+                <span>{{ tyre.type }}</span>
               </li>
-              <li><a class="dropdown-item ms-2" href="#">Bicicleta</a></li>
             </ul>
           </div>
         </div>
         <div class="col-3 py-3">
-          <div class="dropdown">
+          <div class="dropdown btn-group">
+            <button class="btn w-25 btn-sm border border-end-0" disabled>
+              Rin
+            </button>
             <button
-              class="btn dropdown-toggle border w-100 d-flex justify-content-start"
+              class="btn dropdown-toggle w-75 border border-start-0 btn-sm text-end"
               type="button"
               id="dropdownMenuButton1"
               data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Rin
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item ms-2" href="#">22.5</a></li>
-              <li><a class="dropdown-item ms-2" href="#">15</a></li>
-              <li><a class="dropdown-item ms-2" href="#">20.5</a></li>
+            ></button>
+            <ul class="dropdown-menu w-75">
+              <li *ngFor="let tyre of tyres">
+                <span>{{ tyre.rhine }}</span>
+              </li>
             </ul>
           </div>
         </div>
@@ -116,9 +118,13 @@
             type="number"
             name=""
             placeholder="Cantidad"
-            class="w-70 me-1 h-100"
+            class="w-50 me-1"
           />
-          <button type="button" class="btn btn-secondary w-25">
+          <button
+            type="button"
+            style="margin-top: -1px"
+            class="btn btn-secondary w-25 btn-sm"
+          >
             <fa-icon [icon]="faCheck"></fa-icon>
           </button>
         </div>
@@ -138,25 +144,25 @@
             <th scope="row">Cell 1</th>
             <td class="border">Cell 2</td>
             <td class="border">Cell 3</td>
-            <td class="border"><input type="checkbox" name=""></td>
+            <td class="border"><input type="checkbox" name="" /></td>
           </tr>
           <tr>
             <th scope="row">Cell 4</th>
             <td class="border">Cell 5</td>
             <td class="border">Cell 6</td>
-            <td class="border"><input type="checkbox" name="" checked></td>
+            <td class="border"><input type="checkbox" name="" checked /></td>
           </tr>
           <tr>
             <th scope="row">Cell 7</th>
             <td class="border">Cell 8</td>
             <td class="border">Cell 9</td>
-            <td class="border"><input type="radio" name=""></td>
+            <td class="border"><input type="radio" name="" /></td>
           </tr>
           <tr>
             <th scope="row">Cell 10</th>
             <td class="border">Jacob</td>
             <td class="border">Thornton</td>
-            <td class="border"><input type="radio" name="" checked></td>
+            <td class="border"><input type="radio" name="" checked /></td>
           </tr>
         </tbody>
       </table>

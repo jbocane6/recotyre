@@ -21,7 +21,7 @@ export class CollectorService {
   }
 
   singleCollector(collector: any) {
-    return this.http.get(this.url + 'id');
+    return this.http.get(this.url + collector);
   }
 
   updateCollector(id: any, collector: any) {
