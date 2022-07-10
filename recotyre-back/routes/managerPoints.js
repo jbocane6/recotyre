@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
-    ManagerPoint.findOne({ id: req.params._id }).then(data => {
+    ManagerPoint.findOne({ _id: req.params.id }).then(data => {
         res.json(data);
     }).catch(e => {
         res.json({ message: e });

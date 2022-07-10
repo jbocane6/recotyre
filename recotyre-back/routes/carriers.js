@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
-    Carrier.findOne({ id: req.params._id }).then(data => {
+    Carrier.findOne({ _id: req.params.id }).then(data => {
         res.json(data);
     }).catch(e => {
         res.json({ message: e });
