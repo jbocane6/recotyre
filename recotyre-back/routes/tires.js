@@ -11,8 +11,24 @@ router.get('/', (req, res) => {
     });
 });
 
+router.get('/unique/', (req, res) => {
+    Tire.find().distinct('type').then(data => {
+        res.json(data);
+    }).catch(e => {
+        res.json({ message: e });
+    });
+});
+
 router.get('/:id', (req, res) => {
     Tire.findOne({ _id: req.params.id }).then(data => {
+        res.json(data);
+    }).catch(e => {
+        res.json({ message: e });
+    });
+});
+
+router.get('/rhine/:type', (req, res) => {
+    Tire.find({ type: req.params.type }).then(data => {
         res.json(data);
     }).catch(e => {
         res.json({ message: e });
