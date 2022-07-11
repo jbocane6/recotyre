@@ -2,39 +2,25 @@
   <div class="col-1">
     <app-sidebar></app-sidebar>
   </div>
-  <div class="col-11">
-    <nav>
-      <div class="dropdown justify-content-start">
-        <button
-          class="btn dropdown-toggle"
-          type="button"
-          id="dropdownMenuButton1"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          Zona / Localidad
-        </button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item ms-2" href="#">Turbo</a></li>
-          <li><a class="dropdown-item ms-2" href="#">Sencillo</a></li>
-          <li><a class="dropdown-item ms-2" href="#">Doble troque</a></li>
-        </ul>
-        <button
-          class="btn dropdown-toggle ms-5"
-          type="button"
-          id="dropdownMenuButton1"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-          Punto de recolección
-          >
-        </button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item ms-2" href="#">Casa Toro Américas</a></li>
-          <li><a class="dropdown-item ms-2" href="#">Taller AutoCar</a></li>
-          <li>
-            <a class="dropdown-item ms-2" href="#">Taller Jr Reparaciones</a>
-          </li>
-        </ul>
+  <div class="col-11 no_space">
+    <nav class="row">
+      <div class="col-3">
+        <select class="form-select">
+          <option selected disabled>Zona / Localidad</option>
+          <option value="turbo">Turbo</option>
+          <option value="sencillo">Sencillo</option>
+          <option value="doble troque">Doble troque</option>
+        </select>
+      </div>
+      <div class="col-3">
+        <select class="form-select">
+          <option selected disabled>Punto de recolección</option>
+          <option value="casaToro">Casa Toro Américas</option>
+          <option value="AutoCar">Taller AutoCar</option>
+          <option value="jr">Taller Jr Reparaciones</option>
+        </select>
+      </div>
+      <div class="col-6">
         <div class="w-100 d-flex justify-content-end">
           <input
             type="text"
@@ -42,11 +28,11 @@
             class="w-50 rounded"
             placeholder="Buscar"
           />
-          <button class="btn btn-outline-success ms-1">Buscar</button>
+          <button class="btn color2 ms-3">Buscar</button>
         </div>
       </div>
     </nav>
-    <div class="info">
+    <div class="info borders p-3">
       <h4 class="origin">DATOS DEL PUNTO</h4>
       <div class="row pb-3">
         <div class="col-8 py-3">
@@ -63,29 +49,33 @@
             </div>
           </div>
           <div class="text-center">
-            <button type="button" class="btn btn-primary search">
+            <button type="button" class="btn color2 search">
               Confirmar Punto
             </button>
           </div>
         </div>
       </div>
     </div>
-    <div class="info">
+    <div class="mt-5 borders pt-3 ps-3">
       <h4 class="origin">DATOS DE LAS LLANTAS</h4>
       <form [formGroup]="tireForm">
-      <div class="row pb-3">
+        <div class="row pb-3">
           <div class="col-5 py-3">
-            <select class="w-100 form-select" formControlName="tireType" (ngModelChange)="loadRhine($event)">
+            <select
+              class="w-100 form-select"
+              formControlName="tireType"
+              (ngModelChange)="loadRhine($event)"
+            >
               <option disabled selected>Tipo de llanta</option>
-              <option *ngFor="let tyre of tyres" value="{{ tyre.type }}">
-                {{ tyre.type }}
+              <option *ngFor="let tyre of tyres" value="{{ tyre }}">
+                {{ tyre }}
               </option>
             </select>
           </div>
           <div class="col-3 py-3">
             <select class="w-100 form-select" formControlName="tireRhine">
               <option selected disabled>Rin</option>
-              <option *ngFor="let tyre of tyres" value="{{ tyre.rhine }}">
+              <option *ngFor="let tyre of rhineList" value="{{ tyre.rhine }}">
                 {{ tyre.rhine }}
               </option>
             </select>
@@ -102,7 +92,7 @@
               type="button"
               (click)="addToTable()"
               style="margin-top: -1px"
-              class="btn btn-secondary w-25 btn-sm add"
+              class="btn color2 w-25 btn-sm add"
             >
               <fa-icon [icon]="faCheck"></fa-icon>
             </button>
@@ -110,10 +100,10 @@
         </div>
       </form>
     </div>
-    <div>
+    <div class="mt-5 mb-3">
       <table name="tires" class="table table-striped table-hover border">
         <thead>
-          <tr class="grey2">
+          <tr class="color2 borders">
             <th scope="col" class="border">Tipo de llanta</th>
             <th scope="col" class="border">Rin</th>
             <th scope="col" class="border" colspan="2">Cantidad</th>
@@ -121,17 +111,17 @@
         </thead>
         <tbody>
           <tr *ngFor="let item of tireList">
-            <td class="border text-center">
+            <td class="borders text-center">
               <span>{{ item.tireType }}</span>
             </td>
-            <td class="border text-center">
+            <td class="borders text-center">
               <span>{{ item.tireRhine }}</span>
             </td>
-            <td class="border text-center">
+            <td class="borders text-center">
               <span>{{ item.tireAmount }}</span>
             </td>
-            <td class="border text-center">
-              <button type="button" class="btn" (click)="removeItem(item)">
+            <td class="borders text-center">
+              <button type="button" class="btn color2" (click)="removeItem(item)">
                 <fa-icon [icon]="faTrash"></fa-icon>
               </button>
             </td>
@@ -139,8 +129,8 @@
         </tbody>
       </table>
     </div>
-    <div class="text-center">
-      <button class="btn btn-primary">Registrar Llantas</button>
+    <div class="text-center mb-2">
+      <button class="btn color2">Registrar Llantas</button>
     </div>
   </div>
 </div>

@@ -15,6 +15,14 @@ export class TireService {
   listTire() {
     return this.http.get(this.url);
   }
+  
+  listUnique() {
+    return this.http.get(this.url+'unique/');
+  }
+
+  listRhine(type: any) {
+    return this.http.get(this.url+"rhine/"+type);
+  }
 
   deleteTire(id:any) {
     return this.http.delete(this.url + id);

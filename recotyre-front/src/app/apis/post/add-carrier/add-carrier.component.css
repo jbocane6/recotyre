@@ -1,3 +1,12 @@
 .formFrame {
-    background-color: #eeeeee;
+  background-color: #eeeeee;
+}
+
+* {
+  cursor: url("../../../../assets/tire-cursor.png"), auto;
+}
+
+.borders {
+  border: 1px solid;
+  border-color: #326c42;
 }

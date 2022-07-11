@@ -8,7 +8,7 @@
       [autoplayInterval]="3000"
       [arrows]="false"
       [margin]="20"
-      [borderRadius]="5"
+      [borderRadius]="0"
       [height]="500"
       [loop]="true"
     >
@@ -16,7 +16,7 @@
   </div>
 </div>
 
-<nav>
+<nav class="color">
   <ul class="menu">
     <li class="item">
       <a
@@ -66,9 +66,17 @@
             />
           </div>
           <div class="flip-card-back">
-            <h1>John Doe</h1>
-            <p>Architect & Engineer</p>
-            <p>We love that guy</p>
+            <h4>
+              Actualmente existen cerca de 238 puntos de recolección de
+              neumáticos fuera de uso en la ciudad de Bogotá. Encuentra el más
+              cercano
+              <a
+                class="tire_link"
+                href="https://www.google.com/maps/d/viewer?mid=1uogR_MYlm460TJcjWpdW8oQ4QOexqTA&hl=es&ll=4.66921156032964%2C-74.0845260688965&z=12"
+                target="_blank"
+                >aquí</a
+              >.
+            </h4>
           </div>
         </div>
       </div>
@@ -86,9 +94,17 @@
             />
           </div>
           <div class="flip-card-back">
-            <h1>John Doe</h1>
-            <p>Architect & Engineer</p>
-            <p>We love that guy</p>
+            <p class="text-center">
+              El reencauche es la mejor opción para aumentar la vida útil de tus
+              llantas y te permite ahorrar dinero. Recuerda realizar este
+              proceso en empresas certificadas.
+              <a
+                class="tire_link"
+                href="https://asociacionanre.org/wp2/"
+                target="_blank"
+                >Más información</a
+              >.
+            </p>
           </div>
         </div>
       </div>
@@ -104,9 +120,10 @@
             />
           </div>
           <div class="flip-card-back">
-            <h1>John Doe</h1>
-            <p>Architect & Engineer</p>
-            <p>We love that guy</p>
+            <p>
+              En Bogotá se abandonan diariamente cerca de 6.600 Llantas, de las
+              cuales solo el 15% tienen una adecuada disposición.
+            </p>
           </div>
         </div>
       </div>
@@ -115,7 +132,7 @@
   <br /><br />
 </div>
 <div class="mt-5 mb-5">
-  <h4 class="text-center my-3">EMPRESAS ASOCIADAS</h4>
+  <h4 class="text-center my-3 color">EMPRESAS ASOCIADAS</h4>
   <div class="">
     <carousel
       [images]="companies"
@@ -123,10 +140,11 @@
       [cellsToScroll]="2"
       [autoplay]="true"
       [autoplayInterval]="2000"
-      [margin]="20"
       [height]="100"
       [loop]="true"
       [arrows]="false"
+      [pauseOnHover]="true"
+      [objectFit]="'contain'"
     >
     </carousel>
   </div>

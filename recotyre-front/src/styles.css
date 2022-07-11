@@ -1,8 +1,9 @@
 body {
-    margin: 0px;
-    background-image: linear-gradient(135deg, rgb(133, 255, 189) 19%, rgb(255, 251, 125) 100%);
-    /* background-image: url("backg.jpeg") repeat ; */
+  margin: 0px;
+  /* background-image: linear-gradient(135deg, rgb(133, 255, 189) 19%, rgb(255, 251, 125) 100%); */
+  background-image: url('https://p4.wallpaperbetter.com/wallpaper/8/895/760/nature-blue-green-leaf-wallpaper-preview.jpg');
+  background-size: auto;
 }
 .container {
-    width: auto;
+  width: auto;
 }

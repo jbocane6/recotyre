@@ -3,6 +3,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  cursor: url("../../../assets/tire-cursor.png"), auto;
 }
 body {
   font-family: sans-serif;
@@ -11,6 +12,7 @@ nav {
   margin-top: 5px;
   padding: 5px 20px;
   border: 1px solid;
+  border-color: #326c42;
   background-color: white;
 }
 .menu {
@@ -19,11 +21,13 @@ nav {
   justify-content: space-around;
 }
 a {
-  color: black;
+  color: #eeeeee;
   text-decoration: none;
+  cursor: url("../../../assets/tire-cursor.png"), auto;
 }
 a:hover {
   text-decoration: underline;
+  cursor: url("../../../assets/tire-cursor.png"), auto;
 }
 .menu li {
   font-size: 16px;
@@ -34,11 +38,12 @@ a:hover {
   border-bottom: 1px solid;
   border-left: 1px solid;
   border-right: 1px solid;
+  cursor: url("../../../assets/tire-cursor.png"), auto;
 }
 .examples,
 .examples-2 {
   border: 1px solid;
-  border-color: #eeeeee;
+  border-color: #326c42;
 }
 .examples-2 {
   background-color: #eeeeee;
@@ -60,7 +65,7 @@ h4 {
 .third {
   padding: 5px;
   border: 1px solid;
-  border-color: #eeeeee;
+  border-color: #326c42;
 }
 .second,
 .third {
@@ -118,7 +123,19 @@ h4 {
 }
 
 .flip-card-back {
-  background-color: #2980b9;
-  color: white;
+  background-color: #eeeeee;
+  color: black;
   transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tire_link {
+  text-decoration: underline;
+  cursor: url("../../../assets/tire-cursor.png"), auto;
+}
+.color {
+  background-color: #326c42;
+  color: #eeeeee;
+  text-decoration: none;
 }

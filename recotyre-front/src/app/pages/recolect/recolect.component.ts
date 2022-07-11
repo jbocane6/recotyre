@@ -29,7 +29,7 @@ export class RecolectComponent implements OnInit {
     this.loadTire();
   }
   loadTire() {
-    this.tireService.listTire().subscribe((data: any) => {
+    this.tireService.listUnique().subscribe((data: any) => {
       this.tyres = data;
       console.log(data);
     });
@@ -45,6 +45,8 @@ export class RecolectComponent implements OnInit {
     })
   }
   loadRhine(element: any) {
-    this.rhineList.push(this.tireForm.value);
+    this.tireService.listRhine(element).subscribe((data:any)=> {
+      this.rhineList = data;
+    })
   }
 }

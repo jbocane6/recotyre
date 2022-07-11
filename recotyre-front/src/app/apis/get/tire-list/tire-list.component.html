@@ -3,16 +3,16 @@
     <app-sidebar></app-sidebar>
   </div>
   <div class="col-11">
-    <div class="row mt-5 me-1 py-2 rounded text-center">
-      <div class="col-md-12 border formFrame">
+    <div class="row me-1 py-2 rounded text-center">
+      <div class="col-md-12 borders formFrame">
         <div class="text-center mt-3">
           <h2>Tires List</h2>
-          <a href="/addTire" class="btn btn-success btn-sm mb-2">Add</a>
+          <a href="/addTire" class="btn btn-outline-success btn-sm mb-2">Add</a>
           <br />
         </div>
         <div class="row">
           <table
-            class="table table-bordered table-warning border-dark mx-2 table-sm"
+            class="table table-bordered table-light border-dark mx-2 table-sm"
           >
             <thead table table-bordered>
               <th>Brand</th>
@@ -30,15 +30,23 @@
                 <td>
                   <button
                     type="button"
-                    class="btn btn-primary btn-sm"
+                    class="btn btn-outline-info btn-sm"
                     data-bs-toggle="modal"
                     (click)="showTire(tire)"
-                    >
+                  >
                     INFO
                   </button>
                   |
-                  <a href="editTire/{{ tire._id }}" class="btn btn-success btn-sm">EDIT</a> |
-                  <button (click)="delTire(tire._id)" class="btn btn-danger btn-sm">
+                  <a
+                    href="editTire/{{ tire._id }}"
+                    class="btn btn-outline-secondary btn-sm"
+                    >EDIT</a
+                  >
+                  |
+                  <button
+                    (click)="delTire(tire._id)"
+                    class="btn btn-outline-danger btn-sm"
+                  >
                     DELETE
                   </button>
                 </td>

@@ -1,10 +1,18 @@
 .formFrame {
-    background-color: #eeeeee;
-  }
-  th {
-    font-size: 12px;
-  }
-  table {
-    width: 98%;
-  }
-  
+  background-color: #eeeeee;
+}
+th {
+  font-size: 12px;
+}
+table {
+  width: 98%;
+}
+
+* {
+  cursor: url("../../../../assets/tire-cursor.png"), auto;
+}
+
+.borders {
+  border: 1px solid;
+  border-color: #326c42;
+}

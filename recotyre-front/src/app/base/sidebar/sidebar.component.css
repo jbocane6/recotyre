@@ -1,6 +1,17 @@
-.side {
-  background-color: #eeeeee;
+* {
+  cursor: url("../../../assets/tire-cursor.png"), auto;
 }
-.border-bottom {
-  color: grey;
+.side {
+  background-color: #326c42;
+}
+.border-bottom, .border-end {
+  color: #eeeeee;
+}
+
+.shine:hover {
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.4),
+  4px 4px 10px 2px rgba(250, 250, 100, 0.4),
+  -4px 4px 10px 2px rgba(100, 100, 250, 0.4),
+  -4px -4px 10px 2px rgba(250, 100, 100, 0.4),
+  4px -4px 10px 2px rgba(100, 250, 100, 0.8);
 }

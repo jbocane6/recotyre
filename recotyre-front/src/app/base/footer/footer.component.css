@@ -1,12 +1,15 @@
+* {
+  cursor: url("../../../assets/tire-cursor.png"), auto;
+}
 .container {
-  margin-top: 25px;
+  margin-top: 4px;
   padding: 0%;
 }
 footer {
-  background-color: #e3f2fd;
+  background-color: #326c42;
 }
 .copyright {
-  background-color: white;
+  background-color: #326c42;
 }
 a {
   text-decoration: none;
@@ -15,10 +18,18 @@ a:hover {
   text-decoration: underline;
 }
 .link {
-    color: black;  
+  color: #eeeeee;
 }
 .activelink {
   cursor: no-drop;
-  color: gray;
+  color: #eeeeee;
   text-decoration: line-through;
+}
+
+.shine:hover {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.4),
+    4px 4px 10px 2px rgba(250, 250, 100, 0.4),
+    -4px 4px 10px 2px rgba(100, 100, 250, 0.4),
+    -4px -4px 10px 2px rgba(250, 100, 100, 0.4),
+    4px -4px 10px 2px rgba(100, 250, 100, 0.8);
 }

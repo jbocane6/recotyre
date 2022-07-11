@@ -1,7 +1,7 @@
 nav {
-  margin-top: 5px;
-  padding: 5px 20px;
-  background-color: #eeeeee;
+  margin-top: 4px;
+  padding: 9px 20px;
+  background-color: #326c42;
 }
 .dropdown {
   list-style-type: none;
@@ -9,28 +9,43 @@ nav {
   justify-content: space-around;
 }
 .info {
-  margin-top: 150px;
+  margin-top: 100px;
 }
+.borders {
+  border: 1px solid;
+  border-color: #326c42;
+}
+
 .img {
-  border: 1px solid #eeeeee;
+  border: 1px solid #326c42;
 }
 .grey {
   background-color: #eeeeee;
 }
-.grey2 {
-  background-color: #cccccc;
+.color2 {
+  background-color: #326c42;
+  color: #eeeeee;
 }
+
 button {
-  box-shadow: 0 0 0 1px rgba(0,0,0,0.4),
-  4px 4px 10px 2px rgba(100, 100, 250, 0.4),
-  -4px 4px 10px 2px rgba(250, 100, 100, 0.4),
-  -4px -4px 10px 2px rgba(100, 250, 100, 0.4),
-  4px -4px 10px 2px rgba(250, 250, 100, 0.8);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.4),
+    4px 4px 10px 2px rgba(100, 100, 250, 0.4),
+    -4px 4px 10px 2px rgba(250, 100, 100, 0.4),
+    -4px -4px 10px 2px rgba(100, 250, 100, 0.4),
+    4px -4px 10px 2px rgba(250, 250, 100, 0.8);
 }
+
 button:hover {
-  box-shadow: 0 0 0 1px rgba(0,0,0,0.4),
-  4px 4px 10px 2px rgba(250, 250, 100, 0.4),
-  -4px 4px 10px 2px rgba(100, 100, 250, 0.4),
-  -4px -4px 10px 2px rgba(250, 100, 100, 0.4),
-  4px -4px 10px 2px rgba(100, 250, 100, 0.8);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.4),
+    4px 4px 10px 2px rgba(250, 250, 100, 0.4),
+    -4px 4px 10px 2px rgba(100, 100, 250, 0.4),
+    -4px -4px 10px 2px rgba(250, 100, 100, 0.4),
+    4px -4px 10px 2px rgba(100, 250, 100, 0.8);
+}
+
+* {
+  cursor: url("../../../assets/tire-cursor.png"), auto;
+}
+.no_space {
+  margin-left: -11px;
 }

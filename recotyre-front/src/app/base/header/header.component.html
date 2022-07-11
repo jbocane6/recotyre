@@ -1,15 +1,15 @@
-<nav>
+<nav class=" color">
   <div class="row justify-content-end">
     <div class="col-2">
       <ul class=" menu-right">
         <li class="item">
-          <a href="https://twitter.com/Juanoso07555284" class="text-black" target="_blank"><fa-icon [icon]="faTwitter"></fa-icon></a>
+          <a href="https://twitter.com/Juanoso07555284" class="shine" target="_blank"><fa-icon [icon]="faTwitter"></fa-icon></a>
         </li>
         <li class="item">
-          <a href="https://www.facebook.com/shisho253" class="text-black" target="_blank"><fa-icon [icon]="faFacebook"></fa-icon></a>
+          <a href="https://www.facebook.com/shisho253" class="shine" target="_blank"><fa-icon [icon]="faFacebook"></fa-icon></a>
         </li>
         <li class="item">
-          <a href="https://www.instagram.com/shisho253/" class="text-black" target="_blank"><fa-icon [icon]="faInstagram"></fa-icon></a>
+          <a href="https://www.instagram.com/shisho253/" class="shine" target="_blank"><fa-icon [icon]="faInstagram"></fa-icon></a>
         </li>
       </ul>
     </div>
@@ -20,29 +20,19 @@
     <div class="row">
       <div class="col-8 justify-content-start">
         <li class="item">
-          <a routerLink="/main" routerLinkActive="activelink" ariaCurrentWhenActive="page"><img src="../../../assets/logo.png" alt="logo" class="logo"> Recotyre</a>
+          <a routerLink="/main" routerLinkActive="activelink" ariaCurrentWhenActive="page"><img src="../../../assets/logo.png" alt="logo" class="logo shine"> Recotyre</a>
         </li>
       </div>
       <div class="col-4 d-flex justify-content-start">
         <li class="item w-50">
-          <div class="dropdown">
-            <button
-              class="btn dropdown-toggle"
-              type="button"
-              id="dropdownMenuButton1"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Idioma
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item ms-2" href="#">English</a></li>
-              <li><a class="dropdown-item ms-2" href="#">Español</a></li>
-            </ul>
-          </div>
+          <select class="form-select">
+            <option selected disabled>Idioma / Language</option>
+            <option value="español">Español</option>
+            <option value="english">English</option>
+          </select>
         </li>
         <li class="item w-50">
-          <a href="#"><fa-icon [icon]="faUser"></fa-icon> Cuenta</a>
+          <a href="#" class="shine text-black"><fa-icon [icon]="faUser"></fa-icon> Cuenta</a>
         </li>
       </div>
     </div>
