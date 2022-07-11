@@ -6,7 +6,7 @@
       [cellsToScroll]="2"
       [autoplay]="true"
       [autoplayInterval]="3000"
-      [dots]="true"
+      [arrows]="false"
       [margin]="20"
       [borderRadius]="5"
       [height]="500"
@@ -53,15 +53,15 @@
   </ul>
 </nav>
 
-<div class="row me-3 mb-5">
+<div class="row me-3 mb-5 cards">
   <div class="col-md-8 first rounded">
     <div class="examples-2 h-100">
       <div class="flip-card h-100 w-100">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
+        <div class="flip-card-inner w-100">
+          <div class="flip-card-front w-100">
             <img
               src="../../../assets/tires-1.jpeg"
-              alt="Avatar"
+              alt="tires-1"
               class="h-100 w-100"
             />
           </div>
@@ -76,14 +76,13 @@
   </div>
   <div class="col-md-4">
     <div class="second h-50 rounded">
-      <!-- <img src="../../../assets/tires-2.jpeg" alt="tires-1" class="tires-2" /> -->
-      <div class="flip-card">
+      <div class="flip-card h-100 w-100">
         <div class="flip-card-inner">
           <div class="flip-card-front">
             <img
               src="../../../assets/tires-2.jpeg"
               alt="tires-2"
-              class="tires"
+              class="h-100 w-100"
             />
           </div>
           <div class="flip-card-back">
@@ -94,15 +93,14 @@
         </div>
       </div>
     </div>
-    <div class="third rounded">
-      <!-- <img src="../../../assets/tires-3.jpeg" alt="tires-1" class="tires-2" /> -->
-      <div class="flip-card">
+    <div class="third h-50 rounded">
+      <div class="flip-card h-100 w-100">
         <div class="flip-card-inner">
           <div class="flip-card-front">
             <img
               src="../../../assets/tires-3.jpeg"
-              alt="Avatar"
-              class="tires-2"
+              alt="tires-2"
+              class="h-100 w-100"
             />
           </div>
           <div class="flip-card-back">
@@ -115,24 +113,21 @@
     </div>
   </div>
   <br /><br />
-  <div class="mt-5 mb-5">
-    <h4 class="text-center my-3">EMPRESAS ASOCIADAS</h4>
-    <div class="examples">
-      <div class="companies">
-        <carousel
-          [images]="companies"
-          [cellsToShow]="2"
-          [cellsToScroll]="2"
-          [autoplay]="true"
-          [autoplayInterval]="2000"
-          [dots]="true"
-          [margin]="20"
-          [borderRadius]="5"
-          [height]="100"
-          [loop]="true"
-        >
-        </carousel>
-      </div>
-    </div>
+</div>
+<div class="mt-5 mb-5">
+  <h4 class="text-center my-3">EMPRESAS ASOCIADAS</h4>
+  <div class="">
+    <carousel
+      [images]="companies"
+      [cellsToShow]="2"
+      [cellsToScroll]="2"
+      [autoplay]="true"
+      [autoplayInterval]="2000"
+      [margin]="20"
+      [height]="100"
+      [loop]="true"
+      [arrows]="false"
+    >
+    </carousel>
   </div>
 </div>

@@ -11,7 +11,7 @@ export class MainComponent {
     { path: './../../assets/company-2.jpeg' },
     { path: './../../assets/company-3.jpeg' },
     { path: './../../assets/company-4.jpeg' },
-    { path: './../../assets/company-5.jpeg' },
+    { path: './../../assets/company-5.png' },
     { path: './../../assets/company-6.jpeg' }
   ];
   images = [

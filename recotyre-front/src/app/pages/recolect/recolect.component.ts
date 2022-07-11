@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { faCheck, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { TireService } from 'src/app/apis/services/tire.service';
 
 @Component({
@@ -9,9 +10,20 @@ import { TireService } from 'src/app/apis/services/tire.service';
 })
 export class RecolectComponent implements OnInit {
   faCheck = faCheck;
+  faTrash = faTrash;
+  tireForm : FormGroup;
+  tireList: any;
+  rhineList: any;
   tyres: any;
 
-  constructor(private tireService: TireService){}
+  constructor(private tireService: TireService, private fb: FormBuilder) {
+    this.tireList=[];
+    this.tireForm = this.fb.group({
+      tireType: ['', Validators.required],
+      tireRhine: ['', Validators.required],
+      tireAmount: ['', Validators.required]
+    });
+  }
 
   ngOnInit(): void {
     this.loadTire();
@@ -21,5 +33,18 @@ export class RecolectComponent implements OnInit {
       this.tyres = data;
       console.log(data);
     });
+  }
+  public addToTable(): void {
+    this.tireList.push(this.tireForm.value);
+    this.tireForm.reset();
+  }
+  removeItem(element: any) {
+    this.tireList.forEach((value:any, index:any) => {
+      if (value == element)
+        this.tireList.splice(index, 1);
+    })
+  }
+  loadRhine(element: any) {
+    this.rhineList.push(this.tireForm.value);
   }
 }
